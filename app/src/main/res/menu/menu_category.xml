@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.Act_Main">
+
+    <item
+        android:id="@+id/menu_add_category"
+        android:orderInCategory="90"
+        android:title="@string/text_add_category"
+        android:icon="@drawable/fab_add"
+        app:showAsAction="ifRoom" />
+
+</menu>
