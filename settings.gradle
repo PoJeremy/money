@@ -1,1 +1,1 @@
-include ':app', ':mymoney'
+include ':app', ':mymoney', ':daoexamplegenerator'
