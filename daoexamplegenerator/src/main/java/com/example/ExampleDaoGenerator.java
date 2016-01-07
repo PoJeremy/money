@@ -10,18 +10,17 @@ public class ExampleDaoGenerator {
 
         Schema schema = new Schema(1,"com.f1reking.greendao");
 
-        addNote(schema);
+        addAccount(schema);
 
         new DaoGenerator().generateAll(schema,"E:/workspace/Android Studio/Money/mymoney/src/main/java-gen");
 
 
     }
 
-    private static void addNote(Schema schema) {
-        Entity note = schema.addEntity("Note");
-        note.addIdProperty();
-        note.addStringProperty("text").notNull();
-        note.addStringProperty("comment");
-        note.addDateProperty("date");
+    private static void addAccount(Schema schema) {
+        Entity account = schema.addEntity("Account");
+        account.addIdProperty().autoincrement();
+        account.addStringProperty("name").notNull();
+        account.addDoubleProperty("amount").notNull();
     }
 }
