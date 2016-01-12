@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
-def AAVersion = '3.2+'
 
 android {
     compileSdkVersion 23
@@ -26,20 +24,12 @@ android {
     }
 }
 
-
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    apt "org.androidannotations:androidannotations:$AAVersion"
-    compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'de.greenrobot:greendao:2.1.0'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }
 
-apt {
-    arguments {
-        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
-    }
-}

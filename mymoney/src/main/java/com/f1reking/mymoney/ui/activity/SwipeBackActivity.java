@@ -4,18 +4,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.f1reking.mymoney.R;
-import com.f1reking.mymoney.ui.view.SwipeBackLayout;
 
-import org.androidannotations.annotations.ViewById;
+import butterknife.Bind;
 
 /**
  * Created by F1ReKing on 2016/1/11.
  */
 public abstract class SwipeBackActivity extends BaseActivity {
 
-    @ViewById
-    SwipeBackLayout swipeBackLayout;
-    @ViewById
+
+
+    @Bind(R.id.toolbar)
     Toolbar toolbar;
 
     protected void initToolBar(){
@@ -37,12 +36,12 @@ public abstract class SwipeBackActivity extends BaseActivity {
     @Override
     protected void initViews() {
         initToolBar();
-        swipeBackLayout.setCallBack(new SwipeBackLayout.CallBack() {
-            @Override
-            public void onFinish() {
-                finish();
-            }
-        });
+//        swipeBackLayout.setCallBack(new SwipeBackLayout.CallBack() {
+//            @Override
+//            public void onFinish() {
+//                finish();
+//            }
+//        });
     }
 
 }
