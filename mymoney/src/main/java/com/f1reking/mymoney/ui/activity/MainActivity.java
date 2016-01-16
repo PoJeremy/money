@@ -1,11 +1,12 @@
 package com.f1reking.mymoney.ui.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.EditText;
+import android.widget.FrameLayout;
 
 import com.f1reking.mymoney.R;
 
@@ -14,30 +15,29 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
-    @Bind(R.id.et_edit)
-    EditText mEtEdit;
-    @Bind(R.id.fab)
-    FloatingActionButton mFab;
-
-    @Override
-    protected void initViews() {
-
-    }
-
-    @Override
-    protected int getContentViewId() {
-        return R.layout.activity_main;
-    }
+    @Bind(R.id.appbar)
+    AppBarLayout mAppbar;
+    @Bind(R.id.frame_content)
+    FrameLayout mFrameContent;
+    @Bind(R.id.main_content)
+    CoordinatorLayout mMainContent;
+    @Bind(R.id.navigation_view)
+    NavigationView mNavigationView;
+    @Bind(R.id.drawer_layout)
+    DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getContentViewId();
+        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        initView();
     }
 
+    private void initView() {
+        setSupportActionBar(mToolbar);
 
+    }
 }

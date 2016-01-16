@@ -33,15 +33,6 @@ public abstract class SwipeBackActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void initViews() {
-        initToolBar();
-//        swipeBackLayout.setCallBack(new SwipeBackLayout.CallBack() {
-//            @Override
-//            public void onFinish() {
-//                finish();
-//            }
-//        });
-    }
+
 
 }

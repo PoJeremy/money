@@ -31,5 +31,6 @@ dependencies {
     compile 'de.greenrobot:greendao:2.1.0'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'junit:junit:4.12'
 }
 
