@@ -13,6 +13,10 @@ import android.widget.FrameLayout;
 import com.f1reking.mymoney.R;
 import com.f1reking.mymoney.presenter.MainPresenter;
 import com.f1reking.mymoney.presenter.MainPresenterImpl;
+import com.f1reking.mymoney.ui.fragment.CategoryFragment;
+import com.f1reking.mymoney.ui.fragment.HomeFragment;
+import com.f1reking.mymoney.ui.fragment.ReportFragment;
+import com.f1reking.mymoney.ui.fragment.SettingFragment;
 import com.f1reking.mymoney.view.MainView;
 
 import butterknife.Bind;
@@ -59,6 +63,7 @@ public class MainActivity extends BaseActivity implements MainView {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        mMainPresenter.switchNavigation(menuItem.getItemId());
                         menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
                         return true;
@@ -68,21 +73,25 @@ public class MainActivity extends BaseActivity implements MainView {
 
     @Override
     public void switchToHome() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new HomeFragment()).commit();
+        mToolbar.setTitle(R.string.navigation_home);
     }
 
     @Override
     public void switchToCategory() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new CategoryFragment()).commit();
+        mToolbar.setTitle(R.string.navigation_category);
     }
 
     @Override
     public void switchToReport() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new ReportFragment()).commit();
+        mToolbar.setTitle(R.string.navigation_report);
     }
 
     @Override
     public void switchToSetting() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new SettingFragment()).commit();
+        mToolbar.setTitle(R.string.navigation_setting);
     }
 }
