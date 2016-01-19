@@ -11,11 +11,14 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.f1reking.mymoney.R;
+import com.f1reking.mymoney.presenter.MainPresenter;
+import com.f1reking.mymoney.presenter.MainPresenterImpl;
+import com.f1reking.mymoney.view.MainView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainView {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
@@ -31,6 +34,7 @@ public class MainActivity extends BaseActivity {
     DrawerLayout mDrawerLayout;
 
     private ActionBarDrawerToggle mDrawerToggle;
+    private MainPresenter mMainPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,8 @@ public class MainActivity extends BaseActivity {
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerContent(mNavigationView);
+        mMainPresenter = new MainPresenterImpl(this);
+        switchToHome();
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -58,5 +64,25 @@ public class MainActivity extends BaseActivity {
                         return true;
                     }
                 });
+    }
+
+    @Override
+    public void switchToHome() {
+
+    }
+
+    @Override
+    public void switchToCategory() {
+
+    }
+
+    @Override
+    public void switchToReport() {
+
+    }
+
+    @Override
+    public void switchToSetting() {
+
     }
 }
