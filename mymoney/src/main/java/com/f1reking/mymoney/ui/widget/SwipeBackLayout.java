@@ -1,4 +1,4 @@
-package com.f1reking.mymoney.ui.view;
+package com.f1reking.mymoney.ui.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

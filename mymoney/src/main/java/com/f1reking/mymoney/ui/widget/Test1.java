@@ -1,4 +1,4 @@
-package com.f1reking.mymoney.ui.view;
+package com.f1reking.mymoney.ui.widget;
 
 /**
  * Created by F1ReKing on 2016/1/5.

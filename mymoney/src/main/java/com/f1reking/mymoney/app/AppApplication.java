@@ -17,7 +17,7 @@ public class AppApplication extends Application {
 
     private List<Activity> activityList = new LinkedList<Activity>();
     private static AppApplication instance;
-    private static Context context = null;
+    private static Context context;
 
     private AppApplication() {
     }
@@ -26,7 +26,7 @@ public class AppApplication extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        context = getApplicationContext();
+        context = context.getApplicationContext();
 
         boolean isDeveloperMode = isDeveliperMode();
 
