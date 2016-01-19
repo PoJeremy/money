@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity implements MainView {
     @Override
     public void switchToHome() {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new HomeFragment()).commit();
-        mToolbar.setTitle(R.string.navigation_home);
+        mToolbar.setTitle(R.string.navigation_account);
     }
 
     @Override
