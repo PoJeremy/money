@@ -5,6 +5,8 @@ package com.f1reking.mymoney.view;
  */
 public interface MainView {
     void switchToHome();
+    void switchToExpense();
+    void switchToIncome();
     void switchToCategory();
     void switchToReport();
     void switchToSetting();

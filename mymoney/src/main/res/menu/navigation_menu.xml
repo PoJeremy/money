@@ -10,6 +10,14 @@
             android:icon="@drawable/ic_home"
             android:title="@string/navigation_account" />
         <item
+            android:id="@+id/navigation_item_expense"
+            android:icon="@drawable/ic_expense"
+            android:title="@string/navigation_expense" />
+        <item
+            android:id="@+id/navigation_item_income"
+            android:icon="@drawable/ic_income"
+            android:title="@string/navigation_income" />
+        <item
             android:id="@+id/navigation_item_category"
             android:icon="@drawable/ic_category"
             android:title="@string/navigation_category" />

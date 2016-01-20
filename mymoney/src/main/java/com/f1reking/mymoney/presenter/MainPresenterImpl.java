@@ -20,6 +20,12 @@ public class MainPresenterImpl implements MainPresenter {
             case R.id.navigation_item_home:
                 mMainView.switchToHome();
                 break;
+            case R.id.navigation_item_expense:
+                mMainView.switchToExpense();
+                break;
+            case R.id.navigation_item_income:
+                mMainView.switchToIncome();
+                break;
             case R.id.navigation_item_category:
                 mMainView.switchToCategory();
                 break;
