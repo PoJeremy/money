@@ -18,7 +18,7 @@ public class MainPresenterImpl implements MainPresenter {
     public void switchNavigation(int id) {
         switch (id){
             case R.id.navigation_item_home:
-                mMainView.switchToHome();
+                mMainView.switchToAccount();
                 break;
             case R.id.navigation_item_expense:
                 mMainView.switchToExpense();
@@ -36,7 +36,7 @@ public class MainPresenterImpl implements MainPresenter {
                 mMainView.switchToSetting();
                 break;
             default:
-                mMainView.switchToHome();
+                mMainView.switchToAccount();
                 break;
         }
     }

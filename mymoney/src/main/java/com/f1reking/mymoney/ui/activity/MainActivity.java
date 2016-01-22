@@ -1,6 +1,5 @@
 package com.f1reking.mymoney.ui.activity;
 
-import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.NavigationView;
@@ -13,16 +12,15 @@ import android.widget.FrameLayout;
 import com.f1reking.mymoney.R;
 import com.f1reking.mymoney.presenter.MainPresenter;
 import com.f1reking.mymoney.presenter.MainPresenterImpl;
+import com.f1reking.mymoney.ui.fragment.AccountFragment;
 import com.f1reking.mymoney.ui.fragment.CategoryFragment;
 import com.f1reking.mymoney.ui.fragment.ExpenseFragment;
-import com.f1reking.mymoney.ui.fragment.AccountFragment;
 import com.f1reking.mymoney.ui.fragment.IncomeFragment;
 import com.f1reking.mymoney.ui.fragment.ReportFragment;
 import com.f1reking.mymoney.ui.fragment.SettingFragment;
 import com.f1reking.mymoney.view.MainView;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements MainView {
 
@@ -55,7 +53,7 @@ public class MainActivity extends BaseActivity implements MainView {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerContent(mNavigationView);
         mMainPresenter = new MainPresenterImpl(this);
-        switchToHome();
+        switchToAccount();
     }
 
     @Override
@@ -77,7 +75,7 @@ public class MainActivity extends BaseActivity implements MainView {
     }
 
     @Override
-    public void switchToHome() {
+    public void switchToAccount() {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new AccountFragment()).commit();
         mToolbar.setTitle(R.string.navigation_account);
     }
