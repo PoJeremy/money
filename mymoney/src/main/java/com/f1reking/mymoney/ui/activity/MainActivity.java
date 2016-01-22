@@ -43,14 +43,12 @@ public class MainActivity extends BaseActivity implements MainView {
     private MainPresenter mMainPresenter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        initView();
+    protected int getContentViewId() {
+        return R.layout.activity_main;
     }
 
-    private void initView() {
+    @Override
+    protected void initViews() {
         setSupportActionBar(mToolbar);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
         mDrawerToggle.syncState();
@@ -58,6 +56,11 @@ public class MainActivity extends BaseActivity implements MainView {
         setupDrawerContent(mNavigationView);
         mMainPresenter = new MainPresenterImpl(this);
         switchToHome();
+    }
+
+    @Override
+    protected void initDatas() {
+
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
