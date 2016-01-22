@@ -10,9 +10,9 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    protected abstract int getContentViewId();
     protected abstract void initViews();
     protected abstract void initDatas();
-    protected abstract int getContentViewId();
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
