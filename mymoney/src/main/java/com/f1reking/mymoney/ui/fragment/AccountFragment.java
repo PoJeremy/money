@@ -1,10 +1,5 @@
 package com.f1reking.mymoney.ui.fragment;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.f1reking.mymoney.R;
 
 /**
@@ -13,8 +8,18 @@ import com.f1reking.mymoney.R;
 public class AccountFragment extends BaseFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_account,container,false);
-        return view;
+    protected int getContentViewId() {
+        return R.layout.fragment_account;
     }
+
+    @Override
+    protected void initViews() {
+
+    }
+
+    @Override
+    protected void initDatas() {
+
+    }
+
 }
