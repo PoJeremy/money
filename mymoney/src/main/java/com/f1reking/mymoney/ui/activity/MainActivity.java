@@ -53,12 +53,12 @@ public class MainActivity extends BaseActivity implements MainView {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerContent(mNavigationView);
         mMainPresenter = new MainPresenterImpl(this);
-        switchToAccount();
+
     }
 
     @Override
     protected void initDatas() {
-
+        switchToAccount();
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
