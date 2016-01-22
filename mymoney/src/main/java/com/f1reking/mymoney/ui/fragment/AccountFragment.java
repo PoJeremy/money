@@ -10,11 +10,11 @@ import com.f1reking.mymoney.R;
 /**
  * Created by F1ReKing on 2016/1/19.
  */
-public class SettingFragment extends BaseFragment {
+public class AccountFragment extends BaseFragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater,  ViewGroup container,  Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_setting,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_account,container,false);
         return view;
     }
 }

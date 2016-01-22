@@ -15,7 +15,7 @@ import com.f1reking.mymoney.presenter.MainPresenter;
 import com.f1reking.mymoney.presenter.MainPresenterImpl;
 import com.f1reking.mymoney.ui.fragment.CategoryFragment;
 import com.f1reking.mymoney.ui.fragment.ExpenseFragment;
-import com.f1reking.mymoney.ui.fragment.HomeFragment;
+import com.f1reking.mymoney.ui.fragment.AccountFragment;
 import com.f1reking.mymoney.ui.fragment.IncomeFragment;
 import com.f1reking.mymoney.ui.fragment.ReportFragment;
 import com.f1reking.mymoney.ui.fragment.SettingFragment;
@@ -75,7 +75,7 @@ public class MainActivity extends BaseActivity implements MainView {
 
     @Override
     public void switchToHome() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new AccountFragment()).commit();
         mToolbar.setTitle(R.string.navigation_account);
     }
 
