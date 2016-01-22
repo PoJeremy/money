@@ -47,13 +47,13 @@ public class MainActivity extends BaseActivity implements MainView {
 
     @Override
     protected void initViews() {
+        mToolbar.setTitle(R.string.navigation_account); //设置在setSupportActionBar之前，否则默认显示应用名
         setSupportActionBar(mToolbar);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerContent(mNavigationView);
         mMainPresenter = new MainPresenterImpl(this);
-
     }
 
     @Override
