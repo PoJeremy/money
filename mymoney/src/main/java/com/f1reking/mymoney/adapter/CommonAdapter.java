@@ -10,11 +10,6 @@ import android.widget.BaseAdapter;
 public class CommonAdapter extends BaseAdapter {
 
 
-
-
-
-
-
     @Override
     public int getCount() {
         return 0;
