@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_record"
@@ -11,10 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="32dp"
         android:src="@android:drawable/ic_menu_edit"
-       android:layout_marginBottom="32dp"
-       app:elevation="6dp"
-        />
+        app:elevation="6dp" />
 
 
 </android.support.design.widget.CoordinatorLayout>
