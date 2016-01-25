@@ -8,7 +8,7 @@ import com.f1reking.mymoney.R;
 public class CategoryFragment extends BaseFragment {
 
     @Override
-    protected int getContentViewId() {
+    protected int getLayoutRes() {
         return R.layout.fragment_category;
     }
 

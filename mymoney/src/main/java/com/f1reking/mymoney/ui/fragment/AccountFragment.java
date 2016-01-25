@@ -20,7 +20,7 @@ public class AccountFragment extends BaseFragment {
     CoordinatorLayout mCoordinatorLayout;
 
     @Override
-    protected int getContentViewId() {
+    protected int getLayoutRes() {
         return R.layout.fragment_account;
     }
 

@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity implements MainView {
     private MainPresenter mMainPresenter;
 
     @Override
-    protected int getContentViewId() {
+    protected int getLayoutRes() {
         return R.layout.activity_main;
     }
 
@@ -49,64 +49,60 @@ public class MainActivity extends BaseActivity implements MainView {
     protected void initViews() {
         mToolbar.setTitle(R.string.navigation_account); //设置在setSupportActionBar之前，否则默认显示应用名
         setSupportActionBar(mToolbar);
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string
+                .drawer_close);
         mDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerContent(mNavigationView);
         mMainPresenter = new MainPresenterImpl(this);
-    }
-
-    @Override
-    protected void initDatas() {
         switchToAccount();
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        mMainPresenter.switchNavigation(menuItem.getItemId());
-                        menuItem.setChecked(true);
-                        mDrawerLayout.closeDrawers();
-                        return true;
-                    }
-                });
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                mMainPresenter.switchNavigation(menuItem.getItemId());
+                menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
+                return true;
+            }
+        });
     }
 
     @Override
     public void switchToAccount() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new AccountFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new AccountFragment()).commit();
         mToolbar.setTitle(R.string.navigation_account);
     }
 
     @Override
     public void switchToExpense() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new ExpenseFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new ExpenseFragment()).commit();
         mToolbar.setTitle(R.string.navigation_expense);
     }
 
     @Override
     public void switchToIncome() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new IncomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new IncomeFragment()).commit();
         mToolbar.setTitle(R.string.navigation_income);
     }
 
     @Override
     public void switchToCategory() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new CategoryFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new CategoryFragment()).commit();
         mToolbar.setTitle(R.string.navigation_category);
     }
 
     @Override
     public void switchToReport() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new ReportFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new ReportFragment()).commit();
         mToolbar.setTitle(R.string.navigation_report);
     }
 
     @Override
     public void switchToSetting() {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new SettingFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new SettingFragment()).commit();
         mToolbar.setTitle(R.string.navigation_setting);
     }
 }

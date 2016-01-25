@@ -35,9 +35,6 @@ public class MainPresenterImpl implements MainPresenter {
             case R.id.navigation_item_setting:
                 mMainView.switchToSetting();
                 break;
-            default:
-                mMainView.switchToAccount();
-                break;
         }
     }
 }

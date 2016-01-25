@@ -15,7 +15,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected View rootView;
 
-    protected abstract int getContentViewId();
+    protected abstract int getLayoutRes();
 
     protected abstract void initViews();
 
@@ -23,7 +23,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(getContentViewId(), container, false);
+        rootView = inflater.inflate(getLayoutRes(), container, false);
         ButterKnife.bind(this, rootView);
         initViews();
         initDatas();
