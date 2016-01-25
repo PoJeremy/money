@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.f1reking.mymoney.ui.activity.BaseActivity;
+
 import butterknife.ButterKnife;
 
 /**
@@ -13,7 +15,8 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment {
 
-    protected View rootView;
+    private View rootView;
+    private BaseActivity mActivity;
 
     protected abstract int getLayoutRes();
 
@@ -34,5 +37,16 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    /**
+     * 获取Activity
+     * @return
+     */
+    public BaseActivity getBaseActivity() {
+        if (null == mActivity) {
+            mActivity = (BaseActivity) getActivity();
+        }
+        return mActivity;
     }
 }
