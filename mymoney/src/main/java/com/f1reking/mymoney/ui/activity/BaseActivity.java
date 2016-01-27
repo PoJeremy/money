@@ -2,7 +2,6 @@ package com.f1reking.mymoney.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.f1reking.mymoney.app.AppApplication;
 
@@ -24,10 +23,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initViews();
         AppApplication.getInstance().addActivity(this);
-    }
-
-    protected <T extends View> T generateFindViewById(int id) {
-        return (T) findViewById(id);
     }
 
     @Override
