@@ -18,11 +18,11 @@ import com.f1reking.mymoney.ui.fragment.ExpenseFragment;
 import com.f1reking.mymoney.ui.fragment.IncomeFragment;
 import com.f1reking.mymoney.ui.fragment.ReportFragment;
 import com.f1reking.mymoney.ui.fragment.SettingFragment;
-import com.f1reking.mymoney.view.MainView;
+import com.f1reking.mymoney.view.IMainView;
 
 import butterknife.Bind;
 
-public class MainActivity extends BaseActivity implements MainView {
+public class MainActivity extends BaseActivity implements IMainView {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
