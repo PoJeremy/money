@@ -1,10 +1,11 @@
 package com.f1reking.mymoney.ui.fragment;
 
+import android.content.Intent;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 
 import com.f1reking.mymoney.R;
+import com.f1reking.mymoney.ui.activity.RecordActivity;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -35,7 +36,7 @@ public class AccountFragment extends BaseFragment {
 
     @OnClick(R.id.fab_record)
     void onclick() {
-        Snackbar.make(mCoordinatorLayout, "点击", Snackbar.LENGTH_SHORT).show();
+        getActivity().startActivity(new Intent(getActivity(), RecordActivity.class));
     }
 
 
